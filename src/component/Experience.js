@@ -1,13 +1,13 @@
 import React from "react";
 
 export default function Experience(props) {
-    const { position, duration,companyName} = props
+  const { position, duration, companyName } = props;
 
-  return(
-    <div>
-        <span>{position}</span>
+  return (
+    <>
+        <span className="bold-font">{position}</span>
         <span>{companyName}</span>
-        <span>{duration}</span>
-    </div>
-  )
+        <span className="experience__last-grid-data">{duration}</span>
+    </>
+  );
 }

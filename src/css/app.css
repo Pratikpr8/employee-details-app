@@ -1,25 +1,31 @@
 @import-normalize;
 @import './employeelist.css';
 @import './employee.css';
+@import './experiencelist.css';
+@import './experience.css';
+@import './employeeedit.css';
 
 *{
     box-sizing: border-box;
-    margin: 0;
 }
 
 html{
  font-family: 'Arima', sans-serif;
- font-size: 1.5rem;
+ font-size: 1.2rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color:#080706;
+    background-color: #EFEFEF;
+
 }
 
 .mr-1{
     margin-right: 5px;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-}
 
 
 

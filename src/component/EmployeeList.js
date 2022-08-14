@@ -1,7 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import Employee from "./Employee";
+import { EmployeeContext } from "./App";
+
+
 
 export default function EmployeeList({ employees }) {
+
+
+  const {onHandleEmployeeAdd} = useContext(EmployeeContext)
+  
   return (
     <div className="employee-list">
     <div>
@@ -15,7 +22,12 @@ export default function EmployeeList({ employees }) {
       </div>
 
       <div className="employee-list__add-employee-btn-container">
-      <button className="btn btn--primary">Add Person</button>
+      <button 
+        className="btn btn--standard"
+        onClick={onHandleEmployeeAdd}
+      >
+        Add Person
+      </button>
       </div>
     </div>
     

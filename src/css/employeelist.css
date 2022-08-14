@@ -13,30 +13,40 @@
     background: none;
     border: none;
     outline: none;
-    font-weight: bold;
-    padding: 5px 20px;
+    /* font-weight: bold; */
+    padding: 5px 15px;
     font-size: 1em;
     cursor:pointer;
-    border-radius: .5rem;
+    border-radius: .3rem;
 }
 
 .btn--primary{
-    background-color: #cb6d51;
+    /* background-color: hsl(200,100%,50%); */
+    background-color: #594D46;
     color:#fff;
 }
 
 .btn--primary:hover{
-    color: #cb6d51;
-    background-color:#000;
-    box-shadow: 0 0 10px 0 #000;
+    background-color: hsl(200,100%,40%);
+    box-shadow: 0 0 10px 0 hsl(200,100%,30%);
 }
 .btn--danger{
-    background-color: #cb6d51;
+    /* background-color: hsl(0,100%,50%); */
+    background-color: #594D46;
     color:#fff;
 }
 
 .btn--danger:hover{
-    color: hsl(10,100%,50%);
-    background-color:#000;
-    box-shadow: 0 0 10px 0 #000;
+    background-color: hsl(00,100%,40%);
+    box-shadow: 0 0 10px 0 hsl(0,100%,30%);
+}
+.btn--standard{
+    background-color: #662E1C;
+    color:#fff;
+    font-weight: normal;
+}
+
+.btn--standard:hover{
+    background-color:hsl(150,100%,10%) ;
+    box-shadow: 0 0 10px 0 hsl(0,100%,3%);
 }

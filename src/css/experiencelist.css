@@ -1,0 +1,16 @@
+.experience-grid{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    row-gap: 5px;
+    column-gap: 20px;
+    justify-content: flex-start;
+    
+}
+
+
+@media (max-width:900px){
+    .experience-grid{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+    }
+}

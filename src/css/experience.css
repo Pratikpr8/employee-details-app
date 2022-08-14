@@ -1,0 +1,10 @@
+.bold-font{
+    font-weight: 600;
+}
+
+
+@media (max-width:900px){
+    .experience__last-grid-data{
+        margin-bottom: 10px;
+    }
+}

@@ -13,8 +13,8 @@ export default function ExperienceList({ experiences }) {
   });
 
   return (
-    <>
+    <div className="experience-grid">
       {experienceList}
-    </>
+    </div>
   );
 }

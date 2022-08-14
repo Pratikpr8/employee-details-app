@@ -1,7 +1,47 @@
+.employee{
+    padding: 25px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+.employee:last-child{
+    border-bottom: none;
+    padding-bottom: 10px;
+}
 
 .employee__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
     
 }
+
+.employee__title{
+    margin: 0;
+    font-size: 1.5rem;
+
+}
+
+.employee__row{
+    margin-top:15px ;
+}
+
+.employee__label{
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.employee__value{
+    font-weight: 300;
+}
+
+.employee__value--indented{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.employee__hobbies{
+    white-space: pre-wrap;
+}
+
