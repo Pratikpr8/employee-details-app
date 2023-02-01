@@ -20,6 +20,7 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #1E0000;
 
 }
 
@@ -33,6 +34,8 @@
 
 .employee-edit__label{
   font-weight: bold;
+  color: #1E0000;
+
 }
 
 .employee-edit__input{
@@ -42,6 +45,14 @@
   padding: 5px 10px;
   outline: none;
   width: 100%;
+  color: #962715;
+}
+
+.employee-edit__input:focus{
+  outline: #BC6D4F;
+  box-shadow: 0 0 5px 0 #BC6D4F;
+  transition: all 100ms;
+
 }
 
 textarea.employee-edit__input{

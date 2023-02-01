@@ -50,10 +50,10 @@ export default function EmployeeExperienceEdit(props) {
       />
       <div></div>
       <button 
-        className="btn btn--danger"
+        className="btn btn--danger btn-red"
         onClick={()=>onHandleExperienceDelete(experience.id)}
       >
-        &times;
+        Cancel
       </button>
     </>
   );

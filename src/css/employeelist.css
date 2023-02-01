@@ -1,7 +1,7 @@
 .employee-list{
     width: 50%;
     min-height: 100vh;
-    border-right: 1px solid black;
+    border-right: 1px solid #A43820;
 }
 
 .employee-list__add-employee-btn-container{
@@ -13,7 +13,6 @@
     background: none;
     border: none;
     outline: none;
-    /* font-weight: bold; */
     padding: 5px 15px;
     font-size: 1em;
     cursor:pointer;
@@ -21,32 +20,53 @@
 }
 
 .btn--primary{
-    /* background-color: hsl(200,100%,50%); */
-    background-color: #594D46;
-    color:#fff;
+    background-color: #896E69;
+    color: #FCFDFE;
 }
 
 .btn--primary:hover{
-    background-color: hsl(200,100%,40%);
-    box-shadow: 0 0 10px 0 hsl(200,100%,30%);
+    background-color: hsl(189,100%,30%);
+    color: #FCFDFE;
+    box-shadow: 0 0 5px 0 hsl(189,100%,30%);
 }
 .btn--danger{
-    /* background-color: hsl(0,100%,50%); */
-    background-color: #594D46;
-    color:#fff;
+    background-color: #896E69;
+    color: #FCFDFE; 
 }
 
 .btn--danger:hover{
-    background-color: hsl(00,100%,40%);
-    box-shadow: 0 0 10px 0 hsl(0,100%,30%);
+    background-color: hsl(346,75%,40%);
+    color: #FCFDFE;
+    box-shadow: 0 0 5px 0 hsl(346,75%,30%);
 }
 .btn--standard{
-    background-color: #662E1C;
-    color:#fff;
+    background-color: hsl(17,99%,64%);
+    color:#FCFDFE;
     font-weight: normal;
 }
 
 .btn--standard:hover{
-    background-color:hsl(150,100%,10%) ;
-    box-shadow: 0 0 10px 0 hsl(0,100%,3%);
+    background-color:hsl(17,99%,54%) ;
+    box-shadow: 0 0 px 0 hsl(17,99%,54%);
+    animation: shake 500ms;
+}
+
+.btn--danger.btn-red{
+    background-color: hsl(7,90%,40%);
+    color: #FCFDFE;
+}
+
+.btn--danger.btn-red:hover{
+    background-color: hsl(7,95%,30%);
+    box-shadow: 0 0 5px 0 hsl(7,90%,30%);
+}
+
+
+@keyframes shake{
+    25%{
+           transform: rotate(5deg); 
+    }
+    75%{
+        transform: rotate(-5deg); 
+    }
 }

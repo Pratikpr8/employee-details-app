@@ -18,28 +18,23 @@ function App() {
     onHandleEmployeeAdd,
     onHandleEmployeeDelete,
     onHandleEmployeeSelect,
-    onHandleEmployeeChange
+    onHandleEmployeeChange,
   };
 
-  useEffect(()=>{
-    const employeeJson = localStorage.getItem("Employee_List")
-  //   // console.log(employeeJson)
-  //   // console.log('there')
-    if (employeeJson !== null){
-      setEmployees(JSON.parse(employeeJson))
-    }
-  },[])
+  useEffect(() => {
+    const employeeJson = localStorage.getItem("Employee_List");
+    if (employeeJson !== null) setEmployees(JSON.parse(employeeJson));
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("Employee_list", JSON.stringify(employees));
-    // console.log(employees)
   }, [employees]);
 
   function onHandleEmployeeChange(id, employee) {
     const newEmployees = [...employees];
     const index = newEmployees.findIndex((r) => r.id === id);
     newEmployees[index] = employee;
-    setEmployees(newEmployees)
+    setEmployees(newEmployees);
   }
 
   function onHandleEmployeeSelect(id) {
@@ -62,13 +57,13 @@ function App() {
         },
       ],
     };
-    setSelectedEmployeeId(newEmployee.id)
+    setSelectedEmployeeId(newEmployee.id);
     setEmployees([...employees, newEmployee]);
   }
 
   function onHandleEmployeeDelete(id) {
-    if(selectedEmployeeId != null && selectedEmployeeId === id){
-      setSelectedEmployeeId(undefined)
+    if (selectedEmployeeId != null && selectedEmployeeId === id) {
+      setSelectedEmployeeId(undefined);
     }
     setEmployees(employees.filter((employee) => employee.id !== id));
   }

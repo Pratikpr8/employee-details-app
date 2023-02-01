@@ -1,7 +1,7 @@
 .employee{
     padding: 25px;
     padding-bottom: 40px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #A43820;
 }
 
 .employee:last-child{
@@ -14,33 +14,40 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    
 }
 
 .employee__title{
     margin: 0;
     font-size: 1.5rem;
-
+    color: #500805;
 }
 
 .employee__row{
-    margin-top:15px ;
+    margin-top:15px;
+    border:1px solid #F1DCC9;
+    padding: 10px 5px;
+    background-color: #F1DCC9;
+    box-shadow: 0 0 7px 0 #9F4636;
+    border-radius: .3rem;
 }
 
 .employee__label{
     font-weight: bold;
     margin-right: 5px;
     font-size: 1.1rem;
+    color:#962715 ;
 }
 
 .employee__value{
-    font-weight: 300;
+    font-weight: 500;
+    color:#1E0000 ;
 }
 
 .employee__value--indented{
     margin-top: 10px;
     margin-left: 20px;
 }
+
 .employee__hobbies{
     white-space: pre-wrap;
 }
