@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/employee-details-app/static/css/main.0a748aab.css",
-    "main.js": "/employee-details-app/static/js/main.398760ab.js",
+    "main.css": "/employee-details-app/static/css/main.06430a74.css",
+    "main.js": "/employee-details-app/static/js/main.cd70608e.js",
     "index.html": "/employee-details-app/index.html",
-    "main.0a748aab.css.map": "/employee-details-app/static/css/main.0a748aab.css.map",
-    "main.398760ab.js.map": "/employee-details-app/static/js/main.398760ab.js.map"
+    "main.06430a74.css.map": "/employee-details-app/static/css/main.06430a74.css.map",
+    "main.cd70608e.js.map": "/employee-details-app/static/js/main.cd70608e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a748aab.css",
-    "static/js/main.398760ab.js"
+    "static/css/main.06430a74.css",
+    "static/js/main.cd70608e.js"
   ]
 }
