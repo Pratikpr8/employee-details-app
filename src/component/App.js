@@ -8,7 +8,7 @@ export const EmployeeContext = React.createContext();
 
 function App() {
   const [selectedEmployeeId, setSelectedEmployeeId] = useState();
-  const [employees, setEmployees] = useState(sampleEmployees);
+  const [employees, setEmployees] = useState([]);
 
   const selectedEmployee = employees.find(
     (employee) => employee.id === selectedEmployeeId
@@ -23,7 +23,9 @@ function App() {
 
   useEffect(() => {
     const employeeJson = JSON.parse(localStorage.getItem("Employee_list"));
-    if(employeeJson){setEmployees(employeeJson)}
+    if (employeeJson?.length > 0) {
+      setEmployees(employeeJson);
+    }
   }, []);
 
   useEffect(() => {
@@ -70,55 +72,58 @@ function App() {
 
   return (
     <EmployeeContext.Provider value={employeeContextValue}>
+      {employees.length === 0 && (
+        <h2 className="app__h2">Click "Add Person" to add an employee.</h2>
+      )}
       <EmployeeList employees={employees} />
       {selectedEmployee && <EmployeeEdit employee={selectedEmployee} />}
     </EmployeeContext.Provider>
   );
 }
 
-const sampleEmployees = [
-  {
-    id: 1,
-    name: "Bruno Pluto",
-    age: 40,
-    contact: "+012-456-789",
-    hobbies: "1.Coding\n2.Cooking\n3.Playing Piano",
-    experiences: [
-      {
-        id: 1,
-        position: "Accountant",
-        companyName: "Green Garden Hotel",
-        duration: "1.5 years",
-      },
-      {
-        id: 2,
-        position: "Finance Manager",
-        companyName: "MoonWalk Company",
-        duration: "2 years",
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "Freddie Jupiter",
-    age: 38,
-    contact: "+012-456-789",
-    hobbies: "1.Web Development\n2.Singing\n3.Beach walk",
-    experiences: [
-      {
-        id: 1,
-        position: "Assistant Manager",
-        companyName: "Radical Finance",
-        duration: "2 years",
-      },
-      {
-        id: 2,
-        position: "Manager",
-        companyName: "The ABD Bank",
-        duration: "2 years",
-      },
-    ],
-  },
-];
+// const sampleEmployees = [
+//   {
+//     id: 1,
+//     name: "Bruno Pluto",
+//     age: 40,
+//     contact: "+012-456-789",
+//     hobbies: "1.Coding\n2.Cooking\n3.Playing Piano",
+//     experiences: [
+//       {
+//         id: 1,
+//         position: "Accountant",
+//         companyName: "Green Garden Hotel",
+//         duration: "1.5 years",
+//       },
+//       {
+//         id: 2,
+//         position: "Finance Manager",
+//         companyName: "MoonWalk Company",
+//         duration: "2 years",
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: "Freddie Jupiter",
+//     age: 38,
+//     contact: "+012-456-789",
+//     hobbies: "1.Web Development\n2.Singing\n3.Beach walk",
+//     experiences: [
+//       {
+//         id: 1,
+//         position: "Assistant Manager",
+//         companyName: "Radical Finance",
+//         duration: "2 years",
+//       },
+//       {
+//         id: 2,
+//         position: "Manager",
+//         companyName: "The ABD Bank",
+//         duration: "2 years",
+//       },
+//     ],
+//   },
+// ];
 
 export default App;
