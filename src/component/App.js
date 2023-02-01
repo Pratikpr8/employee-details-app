@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     const employeeJson = localStorage.getItem("Employee_List");
-    if (employeeJson !== null) setEmployees(JSON.parse(employeeJson));
+    if( employeeJson?.length > 0) setEmployees(JSON.parse(employeeJson));
   }, []);
 
   useEffect(() => {
